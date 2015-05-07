@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Google Maps Project</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gridpak.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDZz2W8jAeFv1Z-Ek3YulzWRyICJAqkP9U"></script>
+
+
+
+
+<script src="app.js"></script>
+</head>
+<body>
+	
+	
+	<div class="content">
+		<div class="nav">
+			<p class="info">Search for any city in the world and see images of its nearby landmarks</p>
+		</div>
+		<div class="hidden">
+			<div class="fullscreen">
+				<span class="ex"></span>
+			</div> 
+		</div>
+			<form class="form">
+			<input id="search" type="input" placeholder="Search for a City"></input>
+			<button type="submit" class='button' value="Find Address"> Search </button> 
+			</form>
+		<div id="map-canvas"></div>
+		
+		 
+	</div>
+	<i class="fa fa-chevron-left fa-3x" id="left"></i>
+	<i class="fa fa-chevron-right fa-3x" id="right"></i>
+	<div class= "scroll" id = "scroll">
+		<div class="imgs"></div>
+	
+	</div>
+
+	<footer>created with the google maps api by jordan gonzales </footer>
+	
+</body>
+</html>
