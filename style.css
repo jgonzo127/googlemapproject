@@ -217,9 +217,9 @@ footer {
 
 		.pic {
 
-    	transform:rotateX(360deg);
-    -ms-transform:rotateX(360deg); /* IE 9 */
-    -webkit-transform:rotateX(360deg); /* Safari and Chrome */
+    	transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg); /* IE 9 */
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
 	}
 
 	#map-canvas {
@@ -244,6 +244,7 @@ footer {
 	}
 
 	
+	
 
 	#left, #right {
 		visibility: hidden;
@@ -260,12 +261,19 @@ footer {
 	}
 
 
-	.pic_full {
-		width: 400px;
-		height: 300px;
+	.scroll {
+		width: 425px;
+		height: 800px;
+		overflow-y:scroll;
+		display: none;
+		
+		white-space: normal;
+		margin-right: auto;
+		margin-left: auto;
+
+		
 	}
 
-	
 
 
 } 

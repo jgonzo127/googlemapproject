@@ -114,10 +114,10 @@ $(document).ready(function(){
     $('.imgs').on('click', "img" ,function(){
         $('.fullscreen, .ex').show();
         $("html, body").animate({ scrollTop: $("#search").offset().top }, 500);
-        $(this).clone().appendTo('.fullscreen').addClass('pic_full');
+        $(this).clone().appendTo('.fullscreen').addClass('pic_full').removeClass('pic');
          $(".imgs").on('click', 'img', function() {
             $('.pic_full').remove();
-            $(this).clone().appendTo('.fullscreen').addClass('pic_full');
+            $(this).clone().appendTo('.fullscreen').removeClass('pic').addClass('pic_full');
           })
         });
   //removes fullscreen window
