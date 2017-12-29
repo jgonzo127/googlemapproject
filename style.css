@@ -1,9 +1,9 @@
 body {
 	background-image: url('img/paper.jpg');
 	background-position: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	font-family: "Gloria Hallelujah";
+	text-align: center;
 	
 }
 .content {
@@ -71,18 +71,10 @@ margin-right: auto;
 
 .scroll {
 	width: auto;
-	height: 425px;
 	border: 1px solid black;
-	overflow-x: auto;
-	overflow-y: hidden;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	background-color: black;
-	white-space: nowrap;
-	font-family: font-awesome;
-	transform:rotateX(180deg);
-    -ms-transform:rotateX(180deg); /* IE 9 */
-    -webkit-transform:rotateX(180deg); /* Safari and Chrome */
 	display: none;
 	
 	
@@ -121,11 +113,9 @@ footer {
 	margin: 0px 0px 0px 2px;
 	list-style-type: scroll;
 	cursor: pointer;
-	transform:rotateX(180deg);
-    -ms-transform:rotateX(180deg); /* IE 9 */
-    -webkit-transform:rotateX(180deg); /* Safari and Chrome */
-    height: 400px;
-	width: 400px;
+	max-height: 400px;
+	width: auto;
+	max-width: 100%;
 	border: 2px solid white;
 	background-repeat: no-repeat;
     
@@ -150,7 +140,7 @@ footer {
 	width:1000px;
 	height: 700px;
 	left: -50%;
-	position: relative;
+	position: absolute;
 	margin-top: 180px;
 	text-align: center;
 	z-index: 5;
@@ -162,9 +152,7 @@ footer {
 	margin: 100px 0px 0px 100px;
 	width: 800px;
 	height: 500px;
-	transform:rotateX(0deg);
-    -ms-transform:rotateX(0deg); /* IE 9 */
-    -webkit-transform:rotateX(0deg); /* Safari and Chrome */
+	display: none;
 }
 
 .ex {
@@ -209,17 +197,7 @@ footer {
 		white-space: normal;
 		margin-right: auto;
 		margin-left: auto;
-		transform:rotateY(180deg);
-	    -ms-transform:rotateY(180deg); /* IE 9 */
-	    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
 		
-	}
-
-		.pic {
-
-    	transform:rotateY(180deg);
-    -ms-transform:rotateY(180deg); /* IE 9 */
-    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
 	}
 
 	#map-canvas {

@@ -78,12 +78,17 @@ $(document).ready(function(){
                  //console.log('%cPlace', 'background: #222; color: #bada55');
             
                   if(place.photos) {
-                  var photoUrl = place.photos[0].getUrl({maxWidth: 3000, minWidth:600});
-                  
-                  
-                 $('.imgs').append("<img class='pic' src="+photoUrl+">").css({'width': '400px'});
+                    //console.log(place);
+                    var photoUrlThumb = place.photos[0].getUrl({maxWidth: 1000, minWidth:600});
+                    var photoUrl = place.photos[0].getUrl({maxWidth: 2000, minWidth:1600});
+                    $('.imgs').append("<a id='img' href='" + photoUrlThumb + "'><img class='pic' src='"+photoUrlThumb+"'/></a>").css({'width': '400px'});
 
-                }
+                  }
+
+                   		 //show pictures fullscreen on click
+                      $('.imgs #img').each( function() {
+                        $(this).fancybox();
+                      });
                
               google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(place.name);
@@ -97,8 +102,8 @@ $(document).ready(function(){
  //runs a search on the map
   $('form').on('submit', function(e) {
     if ($('#search').val() === "") {
-    return;
-    } else {
+    return; 
+  } else {
     e.preventDefault();
     
     poiRequest();
@@ -106,28 +111,11 @@ $(document).ready(function(){
     $('.fullscreen > .pic').remove();
     $('.scroll , #left, #right').show();
     $('.pic').remove();
-    $("html, body").animate({ scrollTop: $("#scroll").offset().top }, 500);
+    //$("html, body").animate({ scrollTop: $("#scroll").offset().top }, 500);
      }
  });
 
-  //show pictures fullscreen on click
-    $('.imgs').on('click', "img" ,function(){
-        $('.fullscreen, .ex').show();
-        $("html, body").animate({ scrollTop: $("#search").offset().top }, 500);
-        $(this).clone().appendTo('.fullscreen').addClass('pic_full').removeClass('pic');
-         $(".imgs").on('click', 'img', function() {
-            $('.pic_full').remove();
-            $(this).clone().appendTo('.fullscreen').removeClass('pic').addClass('pic_full');
-          })
-        });
-  //removes fullscreen window
-        $('.ex').on('click', function(){
-              $('.fullscreen > .pic').remove();
-              $('.fullscreen').hide();
-              
-              });
-         
-  });   
+});
 
         
 
